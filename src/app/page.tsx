@@ -280,16 +280,6 @@ export default function LandingPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Playful Brand Footer */}
-      <footer className="w-full py-6 px-4 text-center z-10 relative select-none border-t border-slate-200/60 bg-white/40 backdrop-blur-xs">
-        <p className="text-xs font-black text-slate-600">
-          Tiny Tales Adventure Bank 🪙 • Crafting lifelong positive habits through play.
-        </p>
-        <p className="text-[11px] font-bold text-slate-400 mt-1">
-          Zero real money • Zero advertisements • 100% Family Safe
-        </p>
-      </footer>
     </main>
   );
 }

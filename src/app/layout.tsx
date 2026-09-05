@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fredoka } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
+import { Footer } from "@/components/Footer";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -31,7 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fredoka.variable} font-sans h-full`}>
       <body className="min-h-full bg-sky-dream text-slate-800 antialiased flex flex-col justify-start items-center selection:bg-pink-300 selection:text-pink-900">
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="w-full flex-1 flex flex-col items-center">
+            {children}
+          </div>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
