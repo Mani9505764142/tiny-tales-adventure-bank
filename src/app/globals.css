@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --font-fredoka-fallback: 'Fredoka', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  font-family: var(--font-fredoka), var(--font-fredoka-fallback);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+/* Dreamy Living Sky Gradient */
+.bg-sky-dream {
+  background: radial-gradient(circle at 50% 10%, #FEF3C7 0%, #BAE6FD 50%, #E9D5FF 100%);
+  background-attachment: fixed;
+}
+
+/* Candy 3D Inset and Bevel Utilities */
+.candy-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 12px 24px -6px rgba(139, 92, 246, 0.15),
+    0 4px 10px 0 rgba(0, 0, 0, 0.04),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9);
+}
+
+.candy-bevel-pink {
+  border-bottom: 5px solid #BE185D;
+}
+
+.candy-bevel-amber {
+  border-bottom: 5px solid #B45309;
+}
+
+.candy-bevel-mint {
+  border-bottom: 5px solid #047857;
+}
+
+.candy-bevel-purple {
+  border-bottom: 5px solid #6D28D9;
+}
+
+.candy-bevel-sky {
+  border-bottom: 5px solid #0369A1;
+}
+
+/* Candy Gloss Highlight */
+.gloss-highlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.gloss-highlight::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  right: 8px;
+  height: 35%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Rainbow Candy Striped Animation */
+@keyframes candy-stripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+
+.rainbow-progress-stripe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25) 12px,
+    transparent 12px,
+    transparent 24px
+  );
+  background-size: 34px 34px;
+  animation: candy-stripes 1.5s linear infinite;
+}
+
+/* Gentle Floating Animation */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+/* Gentle Breathing Animation */
+@keyframes coin-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.animate-breathe {
+  animation: coin-pulse 2.5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar for clean mobile experience */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.2);
+  border-radius: 10px;
+}
