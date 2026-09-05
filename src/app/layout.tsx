@@ -13,7 +13,10 @@ const fredoka = Fredoka({
 
 export const metadata: Metadata = {
   title: "Tiny Tales Adventure Bank 🪙 Turn Chores into Magical Adventures!",
-  description: "A fun, virtual rewards bank to build lifelong habits for kids. Complete fun quests, earn golden coins, and unlock dream goals. Zero real money, 100% safe.",
+  description: "Gamified family banking, 4-jar wealth system, and moral growth. Complete fun quests, earn golden coins, and unlock dream goals. Zero real money, 100% safe.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export const viewport: Viewport = {
